@@ -37,6 +37,6 @@ public class Ejercicio4 {
 	System.out.println("Introduzca un número: ");
 	num = sc.nextInt();
 	System.out.println("El doble de " + num + " es " + (num*2) + " y el triple es " + (num*3));
- 
+	sc.close();
     }
 }

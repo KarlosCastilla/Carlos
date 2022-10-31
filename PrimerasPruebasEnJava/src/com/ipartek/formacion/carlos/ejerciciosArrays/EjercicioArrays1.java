@@ -30,6 +30,7 @@ public class EjercicioArrays1 {
 			leeTabla(combJugador); //volvemos a pedir otra combinación	
 		}
 		System.out.println("¡La cámara está abierta!");
+		sc.close();
 	}	
 		
 	// Esta función iniciliza los valores de la tabla pasada como parámetro con valores aleatorios. La constante MAX determina el valor máximo que ssxe asigna a un elemento,
@@ -49,6 +50,7 @@ public class EjercicioArrays1 {
 		for(int i = 0; i < t.length; i++) { //Recorremos para leer
 			t[i] = sc.nextInt();
 		}
+		sc.close();
 	}
 		
 	//Recorre las dos tablas, secret y jug, e indica para cada elemento de la combinación introducida por el usuario si es mayor, menor o igual que el equivalente en la 
@@ -64,5 +66,6 @@ public class EjercicioArrays1 {
 				System.out.println(" igual");
 			}
 		}
+		
 	}
 }

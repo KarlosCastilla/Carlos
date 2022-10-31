@@ -19,7 +19,7 @@ public class Ejercicio7 {
 		precioSinIva = precioUnidad * cantidad;
 		totalIva = precioSinIva * iva / 100;
 		System.out.println(precioSinIva + totalIva);
-		
+		sc.close();
 
 	}
 

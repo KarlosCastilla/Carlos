@@ -15,7 +15,8 @@ public class Ejercicio5 {
 		
 		System.out.println("Introduzca una cantidad en grados Centigrados: ");
 		gradosC = sc.nextDouble();
-		System.out.println(gradosC + " grados Centigrados son " + (gradosF = 32+(9*gradosC/5)) + " grados Fahrenheit");
+		gradosF = 32+(9*gradosC/5);
+		System.out.println(gradosC + " grados Centigrados son " + gradosF + " grados Fahrenheit");
 		
 // Programa que lee por teclado el valor del radio de una circunferencia y calcula y muestra por pantalla la longitud y el área de la circunferencia. 		
 // Longitud de la circunferencia = 2*PI*Radio, Area de la circunferencia = PI*Radio^2	
@@ -47,7 +48,7 @@ public class Ejercicio5 {
 		cateto2 = sc.nextDouble();
 		hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
 		System.out.println("La hipotenusa es " + hipotenusa);
-		
+		sc.close();
 	}
 
 }

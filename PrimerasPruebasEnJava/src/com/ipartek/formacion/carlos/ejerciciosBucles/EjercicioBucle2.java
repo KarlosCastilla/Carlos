@@ -54,7 +54,7 @@ public class EjercicioBucle2 {
 			numMenor++;
 		}
 		
-		
+		sc.close();
 		
 
 	}

@@ -97,7 +97,7 @@ public class EjercicioBucle1 {
 			System.out.print(b + " ");
 		}while(n > b);	
 		
-		
+		sc.close();
 		
 	}
 	

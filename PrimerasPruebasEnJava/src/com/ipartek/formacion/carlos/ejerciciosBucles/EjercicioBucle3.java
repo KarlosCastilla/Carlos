@@ -17,7 +17,7 @@ public class EjercicioBucle3 {
 		
 		Scanner sc = new Scanner(System.in);
 		int num1, num2;
-		boolean esPar, esImpar;
+		boolean esPar;
 		
 		do {
 		   System.out.println("Introduzca un número entero: ");
@@ -39,7 +39,8 @@ public class EjercicioBucle3 {
 			for(int i = (num1 +1); i <= num2; i +=2) {
 				   System.out.print(i + " ");
 			}	   
-		}   
+		} 
+		sc.close();
 	}
 
 }
