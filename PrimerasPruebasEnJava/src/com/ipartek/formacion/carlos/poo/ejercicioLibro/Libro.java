@@ -14,19 +14,21 @@ Escribe un programa para probar el funcionamiento de la clase Libro.*/
 
 public class Libro {
 
-	String titulo, autor;
-	int numEjemLibro, numEjemPrest;
+	private String titulo;
+	private String autor;
+	private int ejemplares;
+	private int prestados;
 	
 	public Libro() {
 		
 	}
 	
-	public Libro(String titulo, String autor, int numEjemLibro, int numEjemPrest) {
+	public Libro(String titulo, String autor, int ejemplares, int prestados) {
 		super();
 		this.titulo = titulo;
 		this.autor = autor;
-		this.numEjemLibro = numEjemLibro;
-		this.numEjemPrest = numEjemPrest;
+		this.ejemplares = ejemplares;
+		this.prestados = prestados;
 	}
 
 	public String getTitulo() {
@@ -45,32 +47,32 @@ public class Libro {
 		this.autor = autor;
 	}
 
-	public int getNumEjemLibro() {
-		return numEjemLibro;
+	public int getEjemplares() {
+		return ejemplares;
 	}
 
-	public void setNumEjemLibro(int numEjemLibro) {
-		this.numEjemLibro = numEjemLibro;
+	public void setEjemplares(int ejemplares) {
+		this.ejemplares = ejemplares;
 	}
 
-	public int getNumEjemPrest() {
-		return numEjemPrest;
+	public int getPrestados() {
+		return prestados;
 	}
 
-	public void setNumEjemPrest(int numEjemPrest) {
-		this.numEjemPrest = numEjemPrest;
+	public void setPrestados(int prestados) {
+		this.prestados = prestados;
 	}
 	//Método préstamo que incremente el atributo correspondiente cada vez que se realice un préstamo del libro. No se podrán prestar libros de los que no queden ejemplares 
 	//disponibles para prestar. Devuelve true si se ha podido realizar la operación y false en caso contrario.
 
-	public boolean Prestamo() {
-		boolean prestado = false;
+	public boolean prestamo() {
+		boolean prestado = true;
 		
-		if (numEjemLibro > numEjemPrest) {
-			numEjemPrest++;
-			prestado = true;
-		}
-		
+		if (prestados < ejemplares) {
+			prestados++;
+		}else {
+			prestado = false;
+		}		
 		return prestado;
 	}
 	
@@ -79,19 +81,27 @@ public class Libro {
 	
 	public boolean devolucion() {
 		boolean devuelto = true;
-		if(numEjemPrest == 0) {
+		if(prestados == 0) {
 			devuelto = false;
 		}else{
-			numEjemPrest--;
+			prestados--;
 		}
 		return devuelto;
 	}
-
+	
+    //método toString sobrescrito para mostrar los datos de la clase Libro
+    @Override
+    public String toString() {
+        return "titulo: " + titulo + "\nautor: " + autor +
+                  "\nejemplares: " + ejemplares + "\nprestados: " + prestados;                                    
+    }
+    //Hecho por mi
 	//Método toString para mostrar los datos de los libros. Este método se heredada de Object y lo debemos modificar (override) para adaptarlo a la clase Libro.
-	@Override
-	public String toString() {
-		return "Libro [titulo=" + titulo + ", autor=" + autor + ", numEjemLibro=" + numEjemLibro + ", numEjemPrest="
-				+ numEjemPrest + "]";
-	}	
+	//@Override
+	//public String toString() {
+	//	return "Libro [titulo=" + titulo + ", autor=" + autor + ", numEjemLibro=" + numEjemLibro + ", numEjemPrest="
+	//			+ numEjemPrest + "]";
+	//}	
 
+	
 }
