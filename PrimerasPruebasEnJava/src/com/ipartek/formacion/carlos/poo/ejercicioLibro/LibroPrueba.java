@@ -104,6 +104,8 @@ public class LibroPrueba {
         System.out.println("Ejemplares: " + libro4.getEjemplares());
         System.out.println("Prestados: " + libro4.getPrestados());
         System.out.println();
+        
+        sc.close();
 					
 
 	}
