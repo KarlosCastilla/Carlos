@@ -37,10 +37,10 @@ class MarcoConFuentes extends JFrame{
 }
 
 class LaminaConFuentes extends JPanel{
-	
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		
+	//Este metodo tiene la particularidad de que es invocado automáticamente por el contenedor, en este caso miLamina
+	public void paintComponent(Graphics g) {//El objeto gráfico que pasamos por parámetro es lo que haya dibujado en la lamina en 
+		super.paintComponent(g);//ese momento, si redimensionamos, minimizamos, etc volvemos a llamar a paintComponent pasándole 
+								//por parámetro lo que tengamos dibujado
 		Graphics2D g2 = (Graphics2D) g;
 		// dibujo rectangulo
 		
