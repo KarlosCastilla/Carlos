@@ -48,8 +48,8 @@ class LaminaBotones2 extends JPanel {
 		add(botonAmarillo);
 		add(botonRojo);
 		
-		ColorFondo Amarillo = new ColorFondo(Color.yellow);
 		ColorFondo Azul = new ColorFondo(Color.blue);
+		ColorFondo Amarillo = new ColorFondo(Color.yellow);
 		ColorFondo Rojo = new ColorFondo(Color.red);
 		//Le decimos a ese botón que va a desencadenar un evento de tipo click
 		botonAzul.addActionListener(Azul);
