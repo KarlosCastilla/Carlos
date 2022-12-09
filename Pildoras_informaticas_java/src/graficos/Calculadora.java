@@ -121,7 +121,7 @@ class LaminaCalculadora extends JPanel{
 			
 			String operacion = e.getActionCommand();//Almacenamos un String en la variable operacion que corresponde al texto del botón
 			
-			calcular(Double.parseDouble(pantalla.getText()));//Parseamos a Double el valor del número en el display
+			calcular(Double.parseDouble(pantalla.getText()));//Parseamos a Double el valor del número en el display y lo pasamos como parámetro
 			
 			ultimaOperacion = operacion;
 						
