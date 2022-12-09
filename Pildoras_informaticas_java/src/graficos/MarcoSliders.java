@@ -35,7 +35,7 @@ class Frame_Sliders extends JFrame{
 
 class Lamina_Sliders extends JPanel{
 	
-	Lamina_Sliders(){
+	public Lamina_Sliders(){
 		
 		JSlider control = new JSlider(0, 100, 50);//Instanciamos un JSlider
 		//JSlider control = new JSlider(SwingConstants.VERTICAL, 0, 100, 50); //Podemos decirle que la orientación sea vertical u horizontal
